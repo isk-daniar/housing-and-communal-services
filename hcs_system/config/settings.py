@@ -42,8 +42,10 @@ INSTALLED_APPS = [
 
     'rest_framework.authtoken',
     'rest_framework',
+    'django_elasticsearch_dsl',
 
     'apps.hcs_system',
+    'apps.search',
     'api',
 ]
 
