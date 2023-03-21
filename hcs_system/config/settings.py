@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 
     'rest_framework.authtoken',
     'rest_framework',
-    'django_elasticsearch_dsl',
 
     'apps.hcs_system',
     'apps.search',
@@ -64,7 +63,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, '../templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -93,7 +92,6 @@ DATABASES = {
         'PORT': env("SQL_PORT"),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
