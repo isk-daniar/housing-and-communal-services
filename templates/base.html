@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} {% endblock %}</title>
+    <title>Личный кабинет</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -14,10 +14,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/base-style.css' %}">
     <link rel="stylesheet" href="{% static 'css/' %}">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/492f08515a.js"></script>
 </head>
 <body>
     <div id="app">
@@ -60,20 +62,21 @@
                         <a href="/account/" class="navigation__item router-link-exact-active navigation__item--active" title="Главная" aria-current="page">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
-                                    <svg class="app-icon-svg" style="width: 1.5rem; fill: rgb(255, 255, 255);">
-                                        <use xlink:href="/img/sprite.svg#home"></use>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                      <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
                                     </svg>
                                 </div>
                             </div>
-                            <div class="navigation__text"> Главная </div>
+                            <div class="navigation__text"> {% block title %}{% endblock %} </div>
                         </a>
                     </div>
                     <div>
                         <a href="/send-cnt/" class="navigation__item" title="Счетчики">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
-                                    <svg class="app-icon-svg" style="width: 1.5rem; fill: rgb(255, 255, 255);">
-                                        <use xlink:href="/img/sprite.svg#speed"></use>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-speedometer" viewBox="0 0 16 16">
+                                      <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+                                      <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
                                     </svg>
                                 </div>
                             </div>
@@ -81,11 +84,12 @@
                         </a>
                     </div>
                     <div>
-                        <a href="/payment" class="navigation__item" title="История оплат">
+                        <a href="/account/" class="navigation__item" title="История оплат">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
-                                    <svg class="app-icon-svg" style="width: 1.5rem; fill: rgb(255, 255, 255);">
-                                        <use xlink:href="/img/sprite.svg#card"></use>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                                      <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                                     </svg>
                                 </div>
                             </div>
@@ -96,8 +100,10 @@
                         <a href="/request" class="navigation__item" title="Заявки">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
-                                    <svg class="app-icon-svg" style="width: 1.5rem; fill: rgb(255, 255, 255);">
-                                        <use xlink:href="/img/sprite.svg#signature"></use>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
+                                      <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                                      <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                                      <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
                                     </svg>
                                 </div>
                             </div>
@@ -108,8 +114,8 @@
                         <a href="/shop" class="navigation__item" title="Магазин">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
-                                    <svg class="app-icon-svg" style="width: 1.5rem; fill: rgb(255, 255, 255);">
-                                        <use xlink:href="/img/sprite.svg#cart"></use>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                                     </svg>
                                 </div>
                             </div>
@@ -120,8 +126,8 @@
                         <a href="/profile" class="navigation__item" title="Профиль">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
-                                    <svg class="app-icon-svg" style="width: 1.5rem; fill: rgb(255, 255, 255);">
-                                        <use xlink:href="/img/sprite.svg#settings"></use>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
                                     </svg>
                                 </div>
                             </div>
@@ -132,8 +138,9 @@
                         <a href="/support" class="navigation__item" title="Тех. поддержка">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
-                                    <svg class="app-icon-svg" style="width: 1.5rem; fill: rgb(255, 255, 255);">
-                                        <use xlink:href="/img/sprite.svg#support"></use>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-wechat" viewBox="0 0 16 16">
+                                      <path d="M11.176 14.429c-2.665 0-4.826-1.8-4.826-4.018 0-2.22 2.159-4.02 4.824-4.02S16 8.191 16 10.411c0 1.21-.65 2.301-1.666 3.036a.324.324 0 0 0-.12.366l.218.81a.616.616 0 0 1 .029.117.166.166 0 0 1-.162.162.177.177 0 0 1-.092-.03l-1.057-.61a.519.519 0 0 0-.256-.074.509.509 0 0 0-.142.021 5.668 5.668 0 0 1-1.576.22ZM9.064 9.542a.647.647 0 1 0 .557-1 .645.645 0 0 0-.646.647.615.615 0 0 0 .09.353Zm3.232.001a.646.646 0 1 0 .546-1 .645.645 0 0 0-.644.644.627.627 0 0 0 .098.356Z"/>
+                                      <path d="M0 6.826c0 1.455.781 2.765 2.001 3.656a.385.385 0 0 1 .143.439l-.161.6-.1.373a.499.499 0 0 0-.032.14.192.192 0 0 0 .193.193c.039 0 .077-.01.111-.029l1.268-.733a.622.622 0 0 1 .308-.088c.058 0 .116.009.171.025a6.83 6.83 0 0 0 1.625.26 4.45 4.45 0 0 1-.177-1.251c0-2.936 2.785-5.02 5.824-5.02.05 0 .1 0 .15.002C10.587 3.429 8.392 2 5.796 2 2.596 2 0 4.16 0 6.826Zm4.632-1.555a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0Zm3.875 0a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0Z"/>
                                     </svg>
                                 </div>
                             </div>
@@ -141,13 +148,65 @@
                         </a>
                     </div>
                 </nav>
+                <div class="sidebar__footer">
+                    <div class="sidebar__footer-links">
+                        <a href="#" title="Учетные данные" class="navigation__item sidebar__footer--item-navigate" style="margin-bottom: 0px;">
+                            <div class="navigation__icon">
+                                <div class="app-icon-svg__block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                                      <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="navigation__text"> Выйти </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="app-content">
+                <span>
+                    <header class="header">
+                        <div class="header__left">
+                            <div class="header__title-block">
+                                <span class="header__title">Главная</span>
+                            </div>
+                        </div>
+                        <div data-v-6e3cd10b="" class="balance">
+                            <div data-v-6e3cd10b="" class="balance__info">
+                                <button data-v-6e3cd10b="" class="app-button mr-2 app-button--primary  app-button__text app-button__text--primary app-button__icon" alt="Версия для слабовидящих" title="Версия для слабовидящих">
+                                    <span class="app-button__content">
+                                        <i class="fa fa-eye" aria-hidden="true" style="font-size: 1.375rem;"></i>
+                                    </span>
+                                </button>
+                                <p data-v-6e3cd10b="" class="mr-2" style="cursor: pointer;">
+                                    <button data-v-6e3cd10b="" class="app-button mr-1 app-button--primary  app-button__text app-button__text--primary app-button__icon" alt="Оплата всех долгов" title="Оплата всех долгов">
+                                        <span class="app-button__content">
+                                            <i class="fa fa-university" aria-hidden="true" style="font-size: 1.25rem;"></i>
+                                        </span>
+                                    </button>
+                                    <span data-v-6e3cd10b="" class="block-debt block-debt--success">0 ₽</span>
+                                </p>
+                            </div>
+                            <div data-v-6e3cd10b="" class="balance__bell">
+                                <div data-v-6e3cd10b="" class="balance__notice">
+                                    <button data-v-6e3cd10b="" class="app-button app-button--primary  app-button__text app-button__text--primary app-button__icon" alt="Уведомления" title="Уведомления">
+                                        <span class="app-button__content">
+                                            <i class="fa fa-bell-o" aria-hidden="true" style="font-size: 1.5rem;"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </span>
             </div>
         </div>
     </div>
     <!-- Content start -->
-    <main class="main">
+    <div class="app-content__wrapper">
         {% block content %}{% endblock %}
-    </main>
+    </div>
 
 </body>
 </html>
