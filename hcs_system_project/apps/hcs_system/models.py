@@ -42,5 +42,5 @@ class ManagingOrganization(models.Model):
 
 class Statement(models.Model):
     subject_appeal = models.CharField(max_length=100)
-    your_message =  models.CharField(max_length=1000)
+    your_message = models.CharField(max_length=1000)
     file = models.FileField()
