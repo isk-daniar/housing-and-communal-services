@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework',
 
-    'apps.hcs_system',
+    'apps.hcs_system-project',
     'apps.search',
     'api.v1',
 ]
