@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 
-from hcs_system.apps.hcs_system.models import PersonalAccount, Statement
+from apps.hcs_system.models import PersonalAccount, Statement
 
 class HomeView(ListView):
     model = PersonalAccount

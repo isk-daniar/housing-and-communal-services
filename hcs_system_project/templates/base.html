@@ -59,7 +59,7 @@
                 </div>
                 <nav class="navigation">
                     <div>
-                        <a href="/account/" class="navigation__item router-link-exact-active navigation__item--active" title="Главная" aria-current="page">
+                        <a href="/account/" class="navigation__item" title="Главная" id="flip1">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -67,7 +67,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="navigation__text"> {% block title %}{% endblock %} </div>
+                            <div class="navigation__text"> Главная </div>
                         </a>
                     </div>
                     <div>
@@ -169,7 +169,7 @@
                     <header class="header">
                         <div class="header__left">
                             <div class="header__title-block">
-                                <span class="header__title">Главная</span>
+                                <span class="header__title">{% block title %}{% endblock %}</span>
                             </div>
                         </div>
                         <div data-v-6e3cd10b="" class="balance">
@@ -208,5 +208,10 @@
         {% block content %}{% endblock %}
     </div>
 
+
+    <!-- scripts -->
+    <script src="{% static 'js/base.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </body>
 </html>
