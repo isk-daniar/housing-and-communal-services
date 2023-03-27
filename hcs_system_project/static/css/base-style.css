@@ -1,11 +1,6 @@
 body, input, textarea {
     font-family: Rubik,sans-serif;
 }
-a, a:active, a:focus, a:hover, a:visited {
-    color: #eff2f7;
-    text-decoration: none;
-    transition: .3s linear;
-}
 * {
     outline: none;
 }
@@ -70,19 +65,8 @@ body {
     margin-bottom: 0.8rem;
     box-sizing: border-box;
 }
-.navigation__item--active:before {
-    -webkit-transition: none;
-    transition: none;
-    content: "";
-    position: absolute;
-    right: -8px;
-    height: 30px;
-    width: 30px;
-    bottom: -30px;
-    background-image: url(/img/menu-item.svg);
-}
 
-.navigation__item--active {
+.navigation__item--active{
     background: #eff2f7;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;

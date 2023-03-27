@@ -7,10 +7,8 @@
     <meta charset="UTF-8">
     <title>Личный кабинет</title>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/base-style.css' %}">
     <link rel="stylesheet" href="{% static 'css/' %}">
@@ -57,9 +55,8 @@
                       </g>
                     </svg>
                 </div>
-                <nav class="navigation">
-                    <div>
-                        <a href="/account/" class="navigation__item" title="Главная" id="flip1">
+                <nav class="navigation" id="navigation_active">
+                        <a href="/account/" class="navigation__item" title="Главная">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -69,7 +66,6 @@
                             </div>
                             <div class="navigation__text"> Главная </div>
                         </a>
-                    </div>
                     <div>
                         <a href="/send-cnt/" class="navigation__item" title="Счетчики">
                             <div class="navigation__icon">
@@ -84,7 +80,7 @@
                         </a>
                     </div>
                     <div>
-                        <a href="/account/" class="navigation__item" title="История оплат">
+                        <a href="/payment/" class="navigation__item" title="История оплат">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
@@ -96,8 +92,7 @@
                             <div class="navigation__text"> История оплат </div>
                         </a>
                     </div>
-                    <div>
-                        <a href="/request" class="navigation__item" title="Заявки">
+                        <a href="/request/" class="navigation__item" title="Заявки" >
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
@@ -109,9 +104,8 @@
                             </div>
                             <div class="navigation__text"> Заявки </div>
                         </a>
-                    </div>
                     <div>
-                        <a href="/shop" class="navigation__item" title="Магазин">
+                        <a href="/shop/" class="navigation__item" title="Магазин">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
@@ -123,7 +117,7 @@
                         </a>
                     </div>
                     <div>
-                        <a href="/profile" class="navigation__item" title="Профиль">
+                        <a href="/profile/" class="navigation__item" title="Профиль">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
@@ -135,7 +129,7 @@
                         </a>
                     </div>
                     <div>
-                        <a href="/support" class="navigation__item" title="Тех. поддержка">
+                        <a href="/support/" class="navigation__item" title="Тех. поддержка">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="38" fill="currentColor" class="bi bi-wechat" viewBox="0 0 16 16">
@@ -147,7 +141,7 @@
                             <div class="navigation__text"> Тех. поддержка </div>
                         </a>
                     </div>
-                </nav>
+                </div>
                 <div class="sidebar__footer">
                     <div class="sidebar__footer-links">
                         <a href="#" title="Учетные данные" class="navigation__item sidebar__footer--item-navigate" style="margin-bottom: 0px;">
@@ -208,10 +202,18 @@
         {% block content %}{% endblock %}
     </div>
 
-
     <!-- scripts -->
     <script src="{% static 'js/base.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+           var url=document.location.href;
+                  $.each($(".navigation__item"),function(){
+            if(this.href==url){$(this).addClass('navigation__item--active');};
+           });
+        });
+    </script>
 </body>
 </html>
