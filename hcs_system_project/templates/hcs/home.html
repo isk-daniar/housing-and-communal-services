@@ -5,5 +5,41 @@
 {% endblock %}
 
 {% block content %}
-ty
+    <div data-v-5a54b754="" class="carousel">
+        <div data-v-5a54b754="" class="slide" style="transition: none 0s ease 0s; transform: translateX(0px); z-index: 10;">
+            <div data-v-5a54b754="" class="content">
+                <div data-v-1202b60b="" data-v-5a54b754="" class="app-card main-banner-card">
+                    <div class="app-card__header"></div>
+                    <div class="app-card__image"></div>
+                    <div class="app-card__content">
+                        <div data-v-1202b60b="" class="banner-discount-discount__block">
+                            <div data-v-1202b60b="" class="banner-discount-discount__title"> Мобильное приложение Квартплата.онлайн </div>
+                            <div data-v-1202b60b="" class="main-banner__description"> Вся информация всегда под рукой.<br data-v-1202b60b=""> Для тех, кто ценит свое время. </div>
+                            <div data-v-1202b60b="" class="main-banner__link">
+                                <div data-v-1202b60b="" class="main-banner__store-image">
+                                    <a data-v-1202b60b="" href="https://play.google.com/store/apps/details?id=com.myhousereactnativemigration&amp;hl=ru" target="_blank">
+                                        <img data-v-1202b60b="" src="/media/img/icon_Google.svg">
+                                    </a>
+                                </div>
+                                <div data-v-1202b60b="" class="main-banner__store-image">
+                                    <a data-v-1202b60b="" href="https://apps.apple.com/ru/app/%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%BF%D0%BB%D0%B0%D1%82%D0%B0-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/id1482895258" target="_blank">
+                                        <img data-v-1202b60b="" src="/media/img/icon_App_Store.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-card__footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-info_room">
+        {% for personal_account in personal_account_list %}
+            {{ personal_account.pa }}
+            {{ personal_account.name }}
+            {{ personal_account.organization }}
+            {{ personal_account.balance }}
+        {% endfor %}
+    </div>
 {% endblock %}

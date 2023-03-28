@@ -214,3 +214,8 @@ body {
 .block-debt--success {
     color: #33bc7d;
 }
+
+/* app-content__wrapper  */
+.app-content__wrapper {
+    padding-bottom: 40px;
+}
