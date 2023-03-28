@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/base-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home-style.css' %}">
     <link rel="stylesheet" href="{% static 'css/' %}">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- Fonts -->
@@ -21,8 +22,8 @@
 </head>
 <body>
     <div id="app">
-        <div class="wrapper">
-            <div class="sidebar">
+        <nav class="wrapper">
+            <nav class="sidebar">
                 <div class="sidebar__logo">
                     <svg xmlns="http://www.w3.org/2000/svg" width="128.527" height="59.146" viewBox="0 0 128.527 59.146">
                       <g id="Сгруппировать_9832" data-name="Сгруппировать 9832" transform="translate(-89 -64.854)">
@@ -56,6 +57,7 @@
                     </svg>
                 </div>
                 <nav class="navigation" id="navigation_active">
+                    <div>
                         <a href="/account/" class="navigation__item" title="Главная">
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
@@ -66,6 +68,7 @@
                             </div>
                             <div class="navigation__text"> Главная </div>
                         </a>
+                    </div>
                     <div>
                         <a href="/send-cnt/" class="navigation__item" title="Счетчики">
                             <div class="navigation__icon">
@@ -92,6 +95,7 @@
                             <div class="navigation__text"> История оплат </div>
                         </a>
                     </div>
+                    <div>
                         <a href="/request/" class="navigation__item" title="Заявки" >
                             <div class="navigation__icon">
                                 <div class="app-icon-svg__block">
@@ -104,6 +108,7 @@
                             </div>
                             <div class="navigation__text"> Заявки </div>
                         </a>
+                    </div>
                     <div>
                         <a href="/shop/" class="navigation__item" title="Магазин">
                             <div class="navigation__icon">
@@ -141,7 +146,7 @@
                             <div class="navigation__text"> Тех. поддержка </div>
                         </a>
                     </div>
-                </div>
+                </nav>
                 <div class="sidebar__footer">
                     <div class="sidebar__footer-links">
                         <a href="#" title="Учетные данные" class="navigation__item sidebar__footer--item-navigate" style="margin-bottom: 0px;">
@@ -157,7 +162,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </nav>
             <div class="app-content">
                 <span>
                     <header class="header">
@@ -194,13 +199,14 @@
                         </div>
                     </header>
                 </span>
+                <div class="app-content__wrapper">
+                    {% block content %}{% endblock %}
+                </div>
             </div>
         </div>
     </div>
     <!-- Content start -->
-    <div class="app-content__wrapper">
-        {% block content %}{% endblock %}
-    </div>
+
 
     <!-- scripts -->
     <script src="{% static 'js/base.js' %}"></script>
