@@ -13,6 +13,10 @@ class BrandAdmin(admin.ModelAdmin):
 class BrandAdmin(admin.ModelAdmin):
     list_display = ["name", "inn", "ogrn", "legal_address", "actual_address", "manager_name", "reception_hours", "telephone", "email", "bank", "bik", "payment_account", "correspondent_account", "slug"]
 
-@admin.register(models.Statement)
+@admin.register(models.CreatingApplication)
 class BrandAdmin(admin.ModelAdmin):
-    list_display = ["subject_appeal", "your_message", "file"]
+    list_display = ["address", "subject_appeal", "your_message", "file"]
+
+@admin.register(models.Address)
+class BrandAdmin(admin.ModelAdmin):
+    list_display = ["name"]

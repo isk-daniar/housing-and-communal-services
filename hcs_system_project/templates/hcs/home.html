@@ -34,12 +34,47 @@
             </div>
         </div>
     </div>
-    <div class="app-info_room">
-        {% for personal_account in personal_account_list %}
-            {{ personal_account.pa }}
-            {{ personal_account.name }}
-            {{ personal_account.organization }}
-            {{ personal_account.balance }}
-        {% endfor %}
+    <div data-v-894d0d10="" class="payment-all__list">
+        <div class="table-payments" data-v-894d0d10="">
+            <table class="app-table app-table--small app-table--only">
+                <thead class="app-table__thead">
+                <tr class="app-table__tr-head">
+                    <th width="30%" class="app-table__th">
+                        <span>Имя</span>
+                    </th>
+                    <th width="15%" class="app-table__th">
+                        <span>ЛС / Договор</span>
+                    </th>
+                    <th width="30%" class="app-table__th">
+                    <span>Поставщик</span>
+                    </th>
+                    <th width="12%" class="app-table__th">
+                        <span>Баланс</span>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+            <div class="app-table__tbody">
+                {% for personal_account in personal_account_list %}
+                    <div class="app-table-pa">
+
+                    </div>
+                    <div class="app-table-name">
+
+                    </div>
+                    <div class="app-table-organization">
+
+                    </div>
+                    <div class="app-table-balance">
+
+                    </div>
+                    {{ personal_account.pa }}
+                    {{ personal_account.name }}
+                    {{ personal_account.organization }}
+                    <span>{{ personal_account.balance }} ₽</span>
+                {% endfor %}
+            </div>
+        </div>
     </div>
+
 {% endblock %}

@@ -7,9 +7,10 @@ class PersonalAccount(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100)
     organization = models.ForeignKey('ManagingOrganization', on_delete=models.PROTECT, null=True)
-    address = models.CharField(max_length=200)
+    address = models.ForeignKey('Address', on_delete=models.PROTECT, null=True)
     last_payment = models.DateField()
     balance = models.ForeignKey('UserBalance', on_delete=models.PROTECT, null=True)
+    user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -18,8 +19,11 @@ class UserBalance(models.Model):
     user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
     date = models.DateField(auto_now=True )
     value = models.DecimalField(max_digits=6, decimal_places=2)
+    value_str = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100)
 
+    def __str__(self):
+        return self.value_str
 
 class ManagingOrganization(models.Model):
     name = models.CharField(max_length=200)
@@ -40,7 +44,15 @@ class ManagingOrganization(models.Model):
     def __str__(self):
         return self.name
 
-class Statement(models.Model):
+
+class Address(models.Model):
+    name = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
+class CreatingApplication(models.Model):
+    address = models.ForeignKey('Address', on_delete=models.PROTECT, null=True)
     subject_appeal = models.CharField(max_length=100)
     your_message = models.CharField(max_length=1000)
     file = models.FileField()

@@ -90,3 +90,50 @@ main-banner__footer-links, .main-banner__link {
     color: #171715;
     margin-bottom: 1rem;
 }
+/* app-payment-all__list  */
+.payment-all__list {
+    margin-bottom: 220px;
+    overflow-y: auto;
+    z-index: 1;
+    position: relative;
+}
+.table-payments {
+    padding-bottom: 3rem;
+}
+.app-table--small {
+    border-spacing: 0 0.1rem;
+}
+.app-table--small .app-table__thead {
+    height: 40px;
+}
+.app-table__thead tr {
+    height: 30px;
+}
+.app-table__thead tr th:first-child {
+    padding: 5px 1.5rem;
+}
+.app-table--small .app-table__thead th {
+    font-size: .875rem;
+}
+.app-table__thead tr th {
+    text-align: left;
+    padding: 0 1.2rem;
+    font-size: 1rem;
+    color: #848483;
+    font-weight: 400;
+}
+.app-table__tbody {
+    width: 100%;
+}
+.app-table-pa {
+    width: 30%;
+}
+.app-table-name{
+    width: 15%;
+}
+.app-table-organization{
+    width: 30%;
+}
+.app-table-balance{
+    width: 12%;
+}
