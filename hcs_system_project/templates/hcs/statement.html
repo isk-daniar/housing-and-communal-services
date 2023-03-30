@@ -5,5 +5,65 @@
 {% endblock %}
 
 {% block content %}
-<button>Iertert</button>
+    <div class="app-card main-banner-card mb-4" data-v-894d0d10="" style="background-image: url(&quot;/media/img/fon-request.png&quot;) !important;">
+        <div class="app-card__header"></div>
+        <div class="app-card__image"></div>
+        <div class="app-card__content">
+            <div class="main-banner">
+                <div class="main-banner__title"> Отправьте заявку в управляющую организацию </div>
+                <div class="main-banner__description"> Задайте свой вопрос или сообщите о проблеме.
+                    <br>
+                    <br>
+                </div>
+                <button type="button" class="app-button app-button--primary btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+                    <span class="app-button__content"> Создать заявку </span>
+                </button>
+            </div>
+        </div>
+        <div class="app-card__footer"></div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <form action="{% url 'v1inc:request' %}" enctype='multipart/form-data' method="POST">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            {{ form.address }}
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="mb-3">
+                  {{ form.subject_appeal }}
+              </div>
+              <div class="mb-3">
+                  {{ form.your_message }}
+              </div>
+              <div class="mb-3">
+                  {{ form.file }}
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+      </form>
+    </div>
+    <div data-v-894d0d10="" class="row">
+        <div data-v-894d0d10="" class="col-md-12 col-12">
+            <div data-v-894d0d10="">
+                <div class="app-table__empty">
+                    <div class="app-table__empty-text">Заявки отсутствуют</div>
+                    <div class="mt-2">
+                        <img src="/img/no-content.svg" width="255px">
+                    </div>
+                </div>
+            </div>
+            <div data-v-894d0d10="" class="d-flex just-center">
+                <div data-v-894d0d10="" class="mt-3">
+                    <!---->
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

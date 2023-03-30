@@ -1,0 +1,91 @@
+.app-card {
+    position: relative;
+    padding: 1.375rem;
+    border-radius: 24px;
+    -webkit-box-shadow: 0 3px 6px rgb(10 42 97 / 16%);
+    box-shadow: 0 3px 6px rgb(10 42 97 / 16%);
+    background: #fff;
+    z-index: 10;
+    width: 100%;
+}
+.main-banner-card {
+    height: 100%;
+    background-image: url(/img/fon-request.png)!important;
+    background-repeat: no-repeat;
+    background-size: cover!important;
+}
+.app-card {
+    position: relative;
+    padding: 1.375rem;
+    border-radius: 24px;
+    box-shadow: 0 3px 6px rgb(10 42 97 / 16%);
+    background: #fff;
+    z-index: 10;
+    width: 100%;
+}
+.main-banner-card {
+    height: 100%;
+    background-image: url(/media/img/fon-request.png)!important;
+    background-repeat: no-repeat;
+    background-size: cover!important;
+}
+.app-card__header {
+    position: relative;
+    top: 0;
+    z-index: 2;
+}
+.banner-discount-discount__block {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.banner-discount-discount__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    max-width: 600px;
+    width: 100%;
+}
+.main-banner__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.main-banner__description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #777776;
+    font-weight: 400;
+}
+main-banner__footer-links, .main-banner__link {
+    display: flex;
+}
+.main-banner__store-image {
+    width: 6.25rem;
+    margin-right: 15px;
+}
+.app-card__footer {
+    position: relative;
+    botom: 0;
+}
+.card-add {
+    margin: 0 1.35rem 0 0;
+    width: 100%;
+    min-width: 485px;
+    max-width: 485px;
+    margin-bottom: 1.35rem;
+    height: 100%;
+    position: relative;
+    padding-right: 110px;
+}
+.card-add__description {
+    color: #777776;
+    margin-bottom: 1rem;
+}
+.card-add__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #171715;
+    margin-bottom: 1rem;
+}
