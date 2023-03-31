@@ -25,13 +25,36 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <form action="{% url 'v1inc:request' %}" enctype='multipart/form-data' method="POST">
       <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            {{ form.address }}
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="app-modal  modal-content">
+          <div class="app-modal__header modal-header">
+            <div class="app-modal__title"> Создание заявки </div>
+            <button type="button" class="app-button--color btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div class="app-modal__content modal-body">
+              <div class="modal-form">
+                <div class="mb-2">
+                    <div class="app-select">
+                        <label class="app-select__label">Адрес</label>
+                        <div dir="auto" class="v-select app-select__component vs--single vs--unsearchable">
+                            <div id="vs1__combobox" role="combobox" aria-expanded="false" aria-owns="vs1__listbox" aria-label="Search for option" class="vs__dropdown-toggle">
+                                <div class="vs__selected-options">
+                                    <span class="vs__selected">
+                                        {{ form.address }}
+
+                                    </span>
+                                    <div class="vs__actions">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" role="presentation" class="vs__open-indicator">
+                                            <path d="M9.211364 7.59931l4.48338-4.867229c.407008-.441854.407008-1.158247 0-1.60046l-.73712-.80023c-.407008-.441854-1.066904-.441854-1.474243 0L7 5.198617 2.51662.33139c-.407008-.441853-1.066904-.441853-1.474243 0l-.737121.80023c-.407008.441854-.407008 1.158248 0 1.600461l4.48338 4.867228L7 10l2.211364-2.40069z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
               <div class="mb-3">
+
                   {{ form.subject_appeal }}
               </div>
               <div class="mb-3">
