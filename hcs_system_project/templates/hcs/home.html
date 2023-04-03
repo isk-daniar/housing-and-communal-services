@@ -39,41 +39,49 @@
             <table class="app-table app-table--small app-table--only">
                 <thead class="app-table__thead">
                 <tr class="app-table__tr-head">
-                    <th width="30%" class="app-table__th">
+                    <th width="320px" class="app-table__th">
                         <span>Имя</span>
                     </th>
-                    <th width="15%" class="app-table__th">
+                    <th width="365px" class="app-table__th">
                         <span>ЛС / Договор</span>
                     </th>
-                    <th width="30%" class="app-table__th">
+                    <th width="440px" class="app-table__th">
                     <span>Поставщик</span>
                     </th>
-                    <th width="12%" class="app-table__th">
+                    <th width="1px" class="app-table__th">
                         <span>Баланс</span>
                     </th>
                 </tr>
                 </thead>
             </table>
+            {% for personal_account in personal_account_list %}
             <div class="app-table__tbody">
-                {% for personal_account in personal_account_list %}
-                    <div class="app-table-pa">
-
-                    </div>
-                    <div class="app-table-name">
-
-                    </div>
-                    <div class="app-table-organization">
-
-                    </div>
-                    <div class="app-table-balance">
-
-                    </div>
-                    {{ personal_account.pa }}
-                    {{ personal_account.name }}
-                    {{ personal_account.organization }}
-                    <span>{{ personal_account.balance }} ₽</span>
-                {% endfor %}
+                <ul class="app-table__tr-body">
+                    <li>
+                        <span class="app-table__title-mob" style="display: none;">Название:</span>
+                        <span>{{ personal_account.name }}</span>
+                    </li>
+                    <li class="app-table__company-mob">
+                        <span class="app-table__title-mob" style="display: none;">Название:</span>
+                        <span>{{ personal_account.personal_account }}</span>
+                    </li>
+                    <li class="app-table__company-mob">
+                        <span class="app-table__title-mob" style="display: none;">Название:</span>
+                        <span>{{ personal_account.organization.name }}</span>
+                    </li>
+                    <li>
+                        <span class="app-table__title-mob">Цена:</span> {{ personal_account.balance }} ₽
+                    </li>
+                    <li>
+                        <div class="app-table__tr-button">
+                            <button class="app-button app-button--primary ">
+                                <span class="app-button__content">Оплатить</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
             </div>
+            {% endfor %}
         </div>
     </div>
 

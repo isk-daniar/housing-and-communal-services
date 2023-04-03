@@ -3,7 +3,7 @@ from . import models
 
 @admin.register(models.PersonalAccount)
 class BrandAdmin(admin.ModelAdmin):
-    list_display = ["pa", "name", "slug", "organization", "address", "last_payment", "balance"]
+    list_display = ["personal_account", "name", "slug", "organization", "address", "last_payment", "balance"]
 
 @admin.register(models.UserBalance)
 class BrandAdmin(admin.ModelAdmin):
