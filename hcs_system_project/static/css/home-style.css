@@ -125,15 +125,48 @@ main-banner__footer-links, .main-banner__link {
 .app-table__tbody {
     width: 100%;
 }
-.app-table-pa {
-    width: 30%;
+/* app-table__tr-body */
+.app-table__tr-tbody {
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    transition: all .3s;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgb(10 42 97 / 16%);
+    background: inherit;
 }
-.app-table-name{
-    width: 15%;
+.app-table__tr-tbody  {
+    background: #fff;
+    text-align: left;
+    padding: 1.25rem 1.125rem;
+    border: none;
+    z-index: 2;
+    position: relative;
+    color: #000;
 }
-.app-table-organization{
-    width: 30%;
+.app-table__tr-body{
+    display: flex;
+    justify-content: space-between;
 }
-.app-table-balance{
-    width: 12%;
+.app-table__title-mob {
+    display: none;
+}
+.app-table__tr-button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.app-table__tr-body li:first-child {
+    border-radius: 20px 0 0 20px;
+    padding-left: 24px;
+}
+.app-table__tr-body{
+    background: #fff;
+    text-align: left;
+    padding: 1.25rem 1.125rem;
+    border: none;
+    z-index: 2;
+    position: relative;
+    color: #000;
+    border-radius: 20px;
 }

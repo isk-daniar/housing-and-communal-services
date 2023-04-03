@@ -3,7 +3,7 @@ from rest_framework.authtoken.admin import User
 
 
 class PersonalAccount(models.Model):
-    pa = models.CharField(max_length=200)
+    personal_account = models.CharField(max_length=200)
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100)
     organization = models.ForeignKey('ManagingOrganization', on_delete=models.PROTECT, null=True)

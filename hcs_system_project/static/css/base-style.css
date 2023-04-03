@@ -19,6 +19,9 @@ body {
     text-rendering: optimizeLegibility;
     background: #eff2f7;
 }
+ul {
+    list-style-type: none
+}
 .wrapper {
     padding: 1.25rem;
 }
