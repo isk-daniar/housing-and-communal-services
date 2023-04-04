@@ -91,6 +91,9 @@ main-banner__footer-links, .main-banner__link {
     margin-bottom: 1rem;
 }
 /* app-payment-all__list*/
+.app-table {
+    margin-left: 20px;
+}
 .payment-all__list {
     margin-bottom: 220px;
     overflow-y: auto;

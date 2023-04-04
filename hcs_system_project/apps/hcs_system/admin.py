@@ -3,11 +3,11 @@ from . import models
 
 @admin.register(models.PersonalAccount)
 class BrandAdmin(admin.ModelAdmin):
-    list_display = ["personal_account", "name", "slug", "organization", "address", "last_payment", "balance"]
+    list_display = ["personal_account", "name", "slug", "organization", "address", "balance"]
 
 @admin.register(models.UserBalance)
 class BrandAdmin(admin.ModelAdmin):
-    list_display = ["user", "date", "value", "slug"]
+    list_display = ["value", "date", "last_payment", "slug", "user"]
 
 @admin.register(models.ManagingOrganization)
 class BrandAdmin(admin.ModelAdmin):

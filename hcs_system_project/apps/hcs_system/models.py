@@ -8,7 +8,6 @@ class PersonalAccount(models.Model):
     slug = models.SlugField(max_length=100)
     organization = models.ForeignKey('ManagingOrganization', on_delete=models.PROTECT, null=True)
     address = models.ForeignKey('Address', on_delete=models.PROTECT, null=True)
-    last_payment = models.DateField()
     balance = models.ForeignKey('UserBalance', on_delete=models.PROTECT, null=True)
     user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
 
@@ -16,14 +15,14 @@ class PersonalAccount(models.Model):
         return self.name
 
 class UserBalance(models.Model):
-    user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
-    date = models.DateField(auto_now=True )
     value = models.DecimalField(max_digits=6, decimal_places=2)
-    value_str = models.CharField(max_length=200)
+    date = models.DateField(auto_now=True)
+    last_payment = models.DateField()
     slug = models.SlugField(max_length=100)
+    user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
 
-    def __str__(self):
-        return self.value_str
+    def __int__(self):
+        return self.value
 
 class ManagingOrganization(models.Model):
     name = models.CharField(max_length=200)

@@ -39,16 +39,16 @@
             <table class="app-table app-table--small app-table--only">
                 <thead class="app-table__thead">
                 <tr class="app-table__tr-head">
-                    <th width="320px" class="app-table__th">
+                    <th width="300px" class="app-table__th">
                         <span>Имя</span>
                     </th>
                     <th width="365px" class="app-table__th">
                         <span>ЛС / Договор</span>
                     </th>
-                    <th width="440px" class="app-table__th">
+                    <th width="440x" class="app-table__th">
                     <span>Поставщик</span>
                     </th>
-                    <th width="1px" class="app-table__th">
+                    <th width="450px" class="app-table__th">
                         <span>Баланс</span>
                     </th>
                 </tr>
@@ -70,7 +70,7 @@
                         <span>{{ personal_account.organization.name }}</span>
                     </li>
                     <li>
-                        <span class="app-table__title-mob">Цена:</span> {{ personal_account.balance }} ₽
+                        <span class="app-table__title-mob">Цена:</span> {{ personal_account.balance.value }} ₽
                     </li>
                     <li>
                         <div class="app-table__tr-button">
