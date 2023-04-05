@@ -42,7 +42,7 @@
                     <th width="300px" class="app-table__th">
                         <span>Имя</span>
                     </th>
-                    <th width="365px" class="app-table__th">
+                    <th width="340px" class="app-table__th">
                         <span>ЛС / Договор</span>
                     </th>
                     <th width="440x" class="app-table__th">
@@ -57,19 +57,19 @@
             {% for personal_account in personal_account_list %}
             <div class="app-table__tbody">
                 <ul class="app-table__tr-body">
-                    <li>
-                        <span class="app-table__title-mob" style="display: none;">Название:</span>
+                    <li class="app-li-pd-5">
+                        <span class="app-table__title-mob " style="display: none;">Название:</span>
                         <span>{{ personal_account.name }}</span>
                     </li>
-                    <li class="app-table__company-mob">
+                    <li class="app-table__company-mob app-li-pd-5">
                         <span class="app-table__title-mob" style="display: none;">Название:</span>
                         <span>{{ personal_account.personal_account }}</span>
                     </li>
-                    <li class="app-table__company-mob">
+                    <li class="app-table__company-mob app-li-pd-5">
                         <span class="app-table__title-mob" style="display: none;">Название:</span>
                         <span>{{ personal_account.organization.name }}</span>
                     </li>
-                    <li>
+                    <li class="app-li-pd-5">
                         <span class="app-table__title-mob">Цена:</span> {{ personal_account.balance.value }} ₽
                     </li>
                     <li>
