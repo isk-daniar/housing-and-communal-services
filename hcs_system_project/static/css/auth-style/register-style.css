@@ -1,0 +1,139 @@
+.header-login {
+    margin-bottom: 120px;
+}
+
+.main-promo__logo {
+    left: 0;
+    position: absolute;
+    top: 30px;
+}
+.row, .row-no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+}
+.page-form__form-block {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 100%;
+}
+.page-form__width {
+    max-width: 415px;
+    width: 415px;
+}
+.page-form__title {
+    color: #0a2a61;
+    font-size: 2.125rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.form-content {
+    margin-top: 35px;
+}
+.page-form__img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* instruction-wrapper */
+.instruction-wrapper[data-v-8a7b8b1e] {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+.app-link {
+    color: #0a2a61;
+    font-size: 1.25rem;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+}
+.img-wrapper[data-v-8a7b8b1e] {
+    display: flex;
+    margin-top: 20px;
+}
+.footer-block__store-image {
+    margin-bottom: -5px;
+    width: 130px;
+}
+/* ------ */
+.mt-6 {
+    margin-top: 3rem!important;
+}
+.ml-2 {
+    margin-left: 1rem!important;
+}
+.col-xs-12 {
+    float: left;
+}
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+/* @media */
+@media (min-width: 1035px)
+.col-md-6 {
+    width: 50%;
+}
+@media (min-width: 1280px)
+.container {
+    width: 1170px;
+}
+@media (min-width: 1035px)
+.col-md-1, .col-md-10, .col-md-11, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: left;
+}
