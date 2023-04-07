@@ -1,0 +1,57 @@
+@font-face {
+	src: url('../fonts/rublik/Rubik-Medium.ttf') format('truetype');
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	src: url('../fonts/rublik/Rubik-Regular.ttf') format('truetype');
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-style: normal;
+}
+
+body, html {
+    box-sizing: border-box;
+    color: #6e7a8a;
+    font-size: 14px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    word-spacing: 1px;
+}
+.background-form {
+    background: url(/media/img/fon_light.png) no-repeat 100%;
+    background-size: cover;
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+.main-container--pages {
+    background: none;
+    border-radius: 3px;
+    box-shadow: none;
+    display: block;
+    height: 100vh;
+    justify-content: center;
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+}
+.main-container {
+    height: 100%;
+    margin: 0 auto;
+    overflow: visible;
+    position: relative;
+    width: 1140px;
+}
+.page-form {
+    bottom: 0;
+    height: 700px;
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: 0;
+    width: 1375px;
+}

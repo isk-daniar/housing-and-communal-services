@@ -1,5 +1,15 @@
-body, input, textarea {
-    font-family: Rubik,sans-serif;
+@font-face {
+	src: url('../fonts/rublik/Rubik-Medium.ttf') format('truetype');
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	src: url('../fonts/rublik/Rubik-Regular.ttf') format('truetype');
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-style: normal;
 }
 * {
     outline: none;

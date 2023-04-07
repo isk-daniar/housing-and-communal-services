@@ -1,10 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'auth_users/auth_base.html' %}
 
-</body>
-</html>
+{% block title %}
+Оплата ЖКХ онлайн | личный кабинет | Оплата коммунальных услуг онлайн
+{% endblock %}
+
+{% block content %}
+    <div data-v-8a7b8b1e="" class="header-login">
+        <section data-v-8a7b8b1e="" class="container">
+            <div data-v-8a7b8b1e="" class="col-md-6 col-12 ml-2">
+                <div data-v-8a7b8b1e="" class="main-promo__logo">
+                    <a data-v-8a7b8b1e="" href="/" class="nuxt-link-active">
+                        <img data-v-8a7b8b1e="" src="/media/img/new_logo.svg" width="160px" alt="logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div data-v-8a7b8b1e="" class="container"
+    ><div data-v-8a7b8b1e="" class="row">
+        <div data-v-8a7b8b1e="" class="col-md-6 col-xs-12">
+            <div data-v-8a7b8b1e="" class="page-form__form-block">
+                <div data-v-8a7b8b1e="" class="page-form__width">
+                    <div data-v-8a7b8b1e="" class="page-form__title">Регистрация</div>
+                    <div data-v-8a7b8b1e="" class="form-content">
+                        <form data-v-8a7b8b1e="">
+                            <div data-v-4363479a="" data-v-8a7b8b1e="" class="app-input" active="" someerror="true">
+                                <span data-v-4363479a="" class="app-input__icon"></span>
+                                <label data-v-4363479a="" id="name-f" class="app-input__label">Номер телефона или почта</label>
+                                <input data-v-4363479a="" autocomplete="" type="text" placeholder=" " id="name-f" icon="true" class="app-input__input"> <!---->
+                                <span data-v-4363479a="" class="app-input__error shake" style="display: none;"><!----> <!----></span>
+                            </div>
+                            <div data-v-4363479a="" data-v-8a7b8b1e="" class="app-input" active="">
+                                <span data-v-4363479a="" class="app-input__icon"></span>
+                                <label data-v-4363479a="" id="pass-f" class="app-input__label">Пароль</label>
+                                <input data-v-4363479a="" autocomplete="password" type="password" placeholder=" " id="pass-f" icon="true" class="app-input__input"> <!---->
+                                <span data-v-4363479a="" class="app-input__error shake" style="display: none;"><!----> <!---->  </span>
+                            </div>
+                            <div data-v-4363479a="" data-v-8a7b8b1e="" class="app-input" active="">
+                                <span data-v-4363479a="" class="app-input__icon"></span>
+                                <label data-v-4363479a="" id="conf-pass-f" class="app-input__label">Повторите пароль</label>
+                                <input data-v-4363479a="" autocomplete="confirm-password" type="password" placeholder=" " id="conf-pass-f" icon="true" class="app-input__input"> <!---->
+                                <span data-v-4363479a="" class="app-input__error shake" style="display: none;">Заполните это поле <!----> Пароли не совпадают </span>
+                            </div>
+                            <div data-v-8a7b8b1e="" class="password-helper">Пароль должен содержать минимум 8 символов. Содержать в себе латинские буквы и цифры.</div>
+                            <div data-v-1ebab412="" data-v-8a7b8b1e="">
+                                <div data-v-1ebab412="" id="capcha" class="capcha">
+                                    <div style="width: 304px; height: 78px;"><div>
+                                        <iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Ld94pcjAAAAAAIPEWT54sPyZuq7IA6uEL6KR1Pa&amp;co=aHR0cHM6Ly94bi0tODBhYWFmM2JpMWFoc2QueG4tLTgwYXNlaGRiOjQ0Mw..&amp;hl=ru&amp;v=6MY32oPwFCn9SUKWt8czDsDw&amp;size=normal&amp;cb=6bcscjx3p8kr" width="304" height="78" role="presentation" name="a-7zws594kxg3o" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                    </div>
+                                        <textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                    </div>
+                                    <iframe style="display: none;"></iframe>
+                                </div> <!---->
+                            </div>
+                            <div data-v-8a7b8b1e="" class="privacy">
+                                <label data-v-246b2ba9="" data-v-8a7b8b1e="" class="app-checkbox">
+                                    <span data-v-246b2ba9="" class="app-checkbox__label">Я даю свое согласие на обработку персональных данныхв соответствии с
+                                        <a data-v-8a7b8b1e="" href="/policy" class="app-link" data-v-246b2ba9="">политикой конфиденциальности</a>&nbsp; и &nbsp;
+                                        <a data-v-8a7b8b1e="" data-v-246b2ba9="" href="https://%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%BF%D0%BB%D0%B0%D1%82%D0%B0.%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/files/useragreement.pdf" class="app-link">пользовательским соглашением.</a>
+                                    </span>
+                                    <input data-v-246b2ba9="" type="checkbox" id="politic-f" class="app-checkbox__input  app-checkbox__input--primary" value="true">
+                                    <span data-v-246b2ba9="" class="app-checkbox__checkmark app-checkbox__outlined  app-checkbox__checkmark--primary"></span>
+                                </label>
+                            </div>
+                            <button data-v-3dceadec="" data-v-8a7b8b1e="" disabled="disabled" class="app-button app-button--danger  app-button--giant">
+                                <span data-v-3dceadec="" class="app-button__content">Зарегистрироваться</span> <!---->
+                            </button>
+                            <div data-v-8a7b8b1e="" class="errors-block"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-v-8a7b8b1e="" class="col-md-6 col-xs-12">
+            <div data-v-8a7b8b1e="" class="page-form__img page-form__img--registration">
+                <img data-v-8a7b8b1e="" src="/media/img/girl-login.svg" alt="">
+            </div>
+        </div>
+    </div>
+        <div data-v-8a7b8b1e="" class="instruction-wrapper">
+            <a data-v-8a7b8b1e="" href="/instruction" class="app-link">Инструкция по использованию сервиса</a>
+            <div data-v-8a7b8b1e="" class="img-wrapper">
+                <div data-v-8a7b8b1e="" class="footer-block__store-image">
+                    <a data-v-8a7b8b1e="" href="https://play.google.com/store/apps/details?id=com.myhousereactnativemigration&amp;hl=ru" target="_blank" rel="noreferrer">
+                        <img data-v-8a7b8b1e="" src="/media/img/icon_Google.svg" alt="google">
+                    </a>
+                </div>
+                <div data-v-8a7b8b1e="" class="footer-block__store-image">
+                    <a data-v-8a7b8b1e="" href="https://apps.apple.com/ru/app/%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%BF%D0%BB%D0%B0%D1%82%D0%B0-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/id1482895258" target="_blank" rel="noreferrer">
+                        <img data-v-8a7b8b1e="" src="/media/img/icon_App_Store.svg" alt="apple">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
