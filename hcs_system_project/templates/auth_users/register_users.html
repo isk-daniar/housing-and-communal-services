@@ -23,23 +23,24 @@
                 <div data-v-8a7b8b1e="" class="page-form__width">
                     <div data-v-8a7b8b1e="" class="page-form__title">Регистрация</div>
                     <div data-v-8a7b8b1e="" class="form-content">
-                        <form data-v-8a7b8b1e="">
+                        <form action="{% url 'v1inc:register' %}" method="POST" enctype="multipart/form-data" novalidate="">
+                            {% csrf_token %}
                             <div data-v-4363479a="" data-v-8a7b8b1e="" class="app-input" active="" someerror="true">
                                 <span data-v-4363479a="" class="app-input__icon"></span>
                                 <label data-v-4363479a="" id="name-f" class="app-input__label">Номер телефона или почта</label>
-                                <input data-v-4363479a="" autocomplete="" type="text" placeholder=" " id="name-f" icon="true" class="app-input__input"> <!---->
+                                <input name="email"  class="app-input__input form-control" type="email" value="">
                                 <span data-v-4363479a="" class="app-input__error shake" style="display: none;"><!----> <!----></span>
                             </div>
                             <div data-v-4363479a="" data-v-8a7b8b1e="" class="app-input" active="">
                                 <span data-v-4363479a="" class="app-input__icon"></span>
                                 <label data-v-4363479a="" id="pass-f" class="app-input__label">Пароль</label>
-                                <input data-v-4363479a="" autocomplete="password" type="password" placeholder=" " id="pass-f" icon="true" class="app-input__input"> <!---->
+                                <input name="password"  class="app-input__input form-control" type="text" value="">
                                 <span data-v-4363479a="" class="app-input__error shake" style="display: none;"><!----> <!---->  </span>
                             </div>
                             <div data-v-4363479a="" data-v-8a7b8b1e="" class="app-input" active="">
                                 <span data-v-4363479a="" class="app-input__icon"></span>
                                 <label data-v-4363479a="" id="conf-pass-f" class="app-input__label">Повторите пароль</label>
-                                <input data-v-4363479a="" autocomplete="confirm-password" type="password" placeholder=" " id="conf-pass-f" icon="true" class="app-input__input"> <!---->
+                                <input name="password2" class="app-input__input form-control" type="text" value="">
                                 <span data-v-4363479a="" class="app-input__error shake" style="display: none;">Заполните это поле <!----> Пароли не совпадают </span>
                             </div>
                             <div data-v-8a7b8b1e="" class="password-helper">Пароль должен содержать минимум 8 символов. Содержать в себе латинские буквы и цифры.</div>
@@ -55,7 +56,7 @@
                             </div>
                             <div data-v-8a7b8b1e="" class="privacy">
                                 <label data-v-246b2ba9="" data-v-8a7b8b1e="" class="app-checkbox">
-                                    <span data-v-246b2ba9="" class="app-checkbox__label">Я даю свое согласие на обработку персональных данныхв соответствии с
+                                    <span data-v-246b2ba9="" class="app-checkbox__label">Я даю свое согласие на обработку персональных данных в соответствии с
                                         <a data-v-8a7b8b1e="" href="/policy" class="app-link" data-v-246b2ba9="">политикой конфиденциальности</a>&nbsp; и &nbsp;
                                         <a data-v-8a7b8b1e="" data-v-246b2ba9="" href="https://%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%BF%D0%BB%D0%B0%D1%82%D0%B0.%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/files/useragreement.pdf" class="app-link">пользовательским соглашением.</a>
                                     </span>
@@ -63,7 +64,7 @@
                                     <span data-v-246b2ba9="" class="app-checkbox__checkmark app-checkbox__outlined  app-checkbox__checkmark--primary"></span>
                                 </label>
                             </div>
-                            <button data-v-3dceadec="" data-v-8a7b8b1e="" disabled="disabled" class="app-button app-button--danger  app-button--giant">
+                            <button data-v-3dceadec="" data-v-8a7b8b1e=""  class="app-button app-button--danger app-button--giant">
                                 <span data-v-3dceadec="" class="app-button__content">Зарегистрироваться</span> <!---->
                             </button>
                             <div data-v-8a7b8b1e="" class="errors-block"></div>
