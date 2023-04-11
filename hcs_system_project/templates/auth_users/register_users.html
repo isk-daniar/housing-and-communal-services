@@ -16,8 +16,8 @@
             </div>
         </section>
     </div>
-    <div data-v-8a7b8b1e="" class="container"
-    ><div data-v-8a7b8b1e="" class="row">
+    <div data-v-8a7b8b1e="" class="container">
+        <div data-v-8a7b8b1e="" class="row">
         <div data-v-8a7b8b1e="" class="col-md-6 col-xs-12">
             <div data-v-8a7b8b1e="" class="page-form__form-block">
                 <div data-v-8a7b8b1e="" class="page-form__width">
@@ -27,7 +27,13 @@
                             {% csrf_token %}
                             <div data-v-4363479a="" data-v-8a7b8b1e="" class="app-input" active="" someerror="true">
                                 <span data-v-4363479a="" class="app-input__icon"></span>
-                                <label data-v-4363479a="" id="name-f" class="app-input__label">Номер телефона или почта</label>
+                                <label data-v-4363479a="" id="name-f" class="app-input__label">Имя пользователя</label>
+                                <input name="username" class="app-input__input form-control" type="text" value="">
+                                <span data-v-4363479a="" class="app-input__error shake" style="display: none;"><!----> <!----></span>
+                            </div>
+                            <div data-v-4363479a="" data-v-8a7b8b1e="" class="app-input" active="" someerror="true">
+                                <span data-v-4363479a="" class="app-input__icon"></span>
+                                <label data-v-4363479a="" id="email-f" class="app-input__label">Номер телефона или почта</label>
                                 <input name="email"  class="app-input__input form-control" type="email" value="">
                                 <span data-v-4363479a="" class="app-input__error shake" style="display: none;"><!----> <!----></span>
                             </div>
